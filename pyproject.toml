@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ragenetics"
+version = "0.1.0"
+description = "Privacy-preserving RAG over genetic test reports (DPVoteRAG + DPSparseVoteRAG)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Vaishak Balachandra" }]
+dependencies = [
+  "rank-bm25>=0.2.2",
+  "numpy>=1.26",
+  "scipy>=1.13",
+  "pydantic>=2.7",
+  "pyyaml>=6.0.2",
+  "python-dotenv>=1.0",
+  "tqdm>=4.66",
+  "loguru>=0.7",
+  "openai>=1.40",
+  "pandas>=2.2",
+  "rapidfuzz>=3.9"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"

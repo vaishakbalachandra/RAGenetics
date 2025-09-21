@@ -1,0 +1,16 @@
+﻿seed: 3
+llm:
+  provider: mock
+  model: debug-mock
+  max_tokens: 256
+retrieval:
+  top_k: 5
+  chunk_size: 600
+  chunk_overlap: 100
+  use_hpo_rerank: true
+privacy:
+  scheme: dp_vote
+  m_voters: 6
+  epsilon_per_vote: 0.5
+  delta: 1e-6
+  max_total_epsilon: 8.0

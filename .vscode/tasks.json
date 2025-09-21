@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run: DPVoteRAG",
+      "type": "shell",
+      "command": "python scripts/run_pipeline.py --config configs/dp_small.yaml --query \"Which HPO terms suggest a ciliopathy?\""
+    },
+    {
+      "label": "Run: DPSparseVoteRAG",
+      "type": "shell",
+      "command": "python scripts/run_pipeline.py --config configs/dp_sparse.yaml --query \"Summarize evidence for CFTR p.Phe508del.\""
+    }
+  ]
+}
